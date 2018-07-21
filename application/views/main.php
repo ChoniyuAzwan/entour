@@ -49,15 +49,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Pemesanan</a></li>
+            <li><a href="#">Riwayat</a></li>
             <li><a href="#">Bantuan</a></li>
-            <li class="dropdown">
+            <li><a href="#">Keluar</a></li>
+            <li><a href="#">Profil</a></li>
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foto Profil <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Profil</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Keluar</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -106,92 +110,25 @@
 
             <div class="post">
               <div class="row margin-bottom">
-                <div class="col-sm-4 gambar">
-                  <a href="<?=base_url()."assets"?>/dist/img/photo1.png" target="_blank"><img class="img-responsive" src="<?=base_url()."assets"?>/dist/img/photo1.png" alt="Photo"></a>
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-xs-8">
-                        <p><b>80 orang<br>
-                        Bus ALS<br>
-                        4.000.000 per hari</b></p>
+                <?php foreach ($list as $list): ?>
+                  <div class="col-sm-4 gambar">
+                    <a href="<?=base_url().'assets/image/mobil/'.$list->gambar;?>" target="_blank"><img class="img-responsive" src="<?=base_url().'assets/image/mobil/'.$list->gambar;?>" alt="Photo"></a>
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="col-xs-8">
+                          <p><b><?=$list->kapasitas;?> orang<br>
+                          <?=$list->nama;?><br>
+                          Rp <?=$list->harga;?></b></p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-4">
-                        <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 gambar">
-                  <a href="<?=base_url()."assets"?>/dist/img/photo1.png" target="_blank"><img class="img-responsive" src="<?=base_url()."assets"?>/dist/img/photo1.png" alt="Photo"></a>
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-xs-8">
-                        <p><b>80 orang<br>
-                        Bus ALS<br>
-                        4.000.000 per hari</b></p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-4">
-                        <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
+                      <div class="form-group">
+                        <div class="col-sm-4">
+                          <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-4 gambar">
-                  <a href="<?=base_url()."assets"?>/dist/img/photo1.png" target="_blank"><img class="img-responsive" src="<?=base_url()."assets"?>/dist/img/photo1.png" alt="Photo"></a>
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-xs-8">
-                        <p><b>80 orang<br>
-                        Bus ALS<br>
-                        4.000.000 per hari</b></p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-4">
-                        <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 gambar">
-                  <a href="<?=base_url()."assets"?>/dist/img/photo1.png" target="_blank"><img class="img-responsive" src="<?=base_url()."assets"?>/dist/img/photo1.png" alt="Photo"></a>
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-xs-8">
-                        <p><b>80 orang<br>
-                        Bus ALS<br>
-                        4.000.000 per hari</b></p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-4">
-                        <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 gambar">
-                  <a href="<?=base_url()."assets"?>/dist/img/photo1.png" target="_blank"><img class="img-responsive" src="<?=base_url()."assets"?>/dist/img/photo1.png" alt="Photo"></a>
-                  <div class="row">
-                    <div class="form-group">
-                      <div class="col-xs-8">
-                        <p><b>80 orang<br>
-                        Bus ALS<br>
-                        4.000.000 per hari</b></p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-4">
-                        <a href="<?=base_url().'home/book';?>" class="btn btn-success pull-right">Book</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+                <?php endforeach ?>                
               </div>
             </div>
           </div>

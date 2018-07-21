@@ -49,15 +49,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Pemesanan</a></li>
+            <li><a href="#">Riwayat</a></li>
             <li><a href="#">Bantuan</a></li>
-            <li class="dropdown">
+            <li><a href="#">Keluar</a></li>
+            <li><a href="#">Profil</a></li>
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Foto Profil <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Profil</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Keluar</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
         <!-- /.navbar-collapse -->
